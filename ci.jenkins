@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('BUILD AND RUN TESTS') {
+        stage('Build docker image. Run tests and build app.') {
             steps {
                 git 'https://github.com/RenatRysaev/dockerized-react'
                 sh 'sudo docker build -t dockerized-react:test -f Dockerfile.test .'
